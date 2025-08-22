@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help - Funarcade.games</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="logo">Funarcade.games</div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Play</a></li>
+      <li><a href="news.html" class="nav-link">News</a></li>
+      <li><a href="help.html" class="nav-link">Help</a></li>
+      <li><a href="faq.html" class="nav-link">FAQ</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="privacy.html" class="nav-link">Privacy & Policy</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Help Content -->
+  <div class="help-main">
+    <!-- Search bar -->
+    <div class="header">
+      <input type="text" id="searchInput" placeholder="Search help topics...">
+    </div>
+
+    <!-- Help Articles -->
+    <div id="helpContent">
+      <div class="help-item">
+        <h2>How to Play Games?</h2>
+        <p>Go to the "Play" section from the sidebar, choose a game, and click play. No download or signup is required.</p>
+      </div>
+
+      <div class="help-item">
+        <h2>Why is my progress lost?</h2>
+        <p>We don’t store user data. Once you close the browser, progress resets.</p>
+      </div>
+
+      <div class="help-item">
+        <h2>Can I play with a friend?</h2>
+        <p>Yes! Some games support two-player mode on the same device.</p>
+      </div>
+
+      <div class="help-item">
+        <h2>How do I report a bug?</h2>
+        <p>Go to the "Contact" section and send us the issue details.</p>
+      </div>
+    </div>
+
+    <!-- No Results Message -->
+    <div id="noResults" class="no-results">No help topics found.</div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    const searchInput = document.getElementById("searchInput");
+    const helpItems = document.querySelectorAll(".help-item");
+    const noResults = document.getElementById("noResults");
+
+    searchInput.addEventListener("keyup", () => {
+      const query = searchInput.value.toLowerCase();
+      let visibleCount = 0;
+
+      helpItems.forEach(item => {
+        const text = item.innerText.toLowerCase();
+        if (text.includes(query)) {
+          item.style.display = "block";
+          visibleCount++;
+        } else {
+          item.style.display = "none";
+        }
+      });
+
+      // Show "No results" if nothing matches
+      if (visibleCount === 0) {
+        noResults.style.display = "block";
+      } else {
+        noResults.style.display = "none";
+      }
+    });
+  </script>
+</body>
+</html>
