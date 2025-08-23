@@ -1,0 +1,25 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f9;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 { margin-bottom: 20px; }
+
+.mode-select button {
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #4a3bce;
+  color: #fff;
+}
+
+#chessboard {
+  margin: 20px auto;
+  width: 400px;
+  max-width: 90vw;
+}
