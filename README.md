@@ -23,17 +23,17 @@ A modernme gaming website built with Html, CSS, Js . Users can enjoy games onlin
 
 🚀 Getting Started
 
-    Clone the repository:
+    Clone the repository:   git clone https://github.com/zroxcoder/funarcade-website.git
 
- git clone   https://github.com/zroxcoder/funarcade-website.git
 
-    Install dependencies:
 
-pnpm install
+    Install dependencies:  pnpm install
 
-    Start the development server:
 
-pnpm dev
+
+    Start the development server: pnpm dev
+
+
 
 
 
